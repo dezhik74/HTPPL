@@ -1,0 +1,64 @@
+/* CSS Document */
+@font-face {
+    font-family: 'Verdana';
+    src: url('../main_css/Verdana.eot');
+    src: url('../main_css/Verdana.eot?#iefix') format('embedded-opentype'),
+         url('../main_css/Verdana.woff2') format('woff2'),
+         url('../main_css/Verdana.woff') format('woff'),
+         url('../main_css/Verdana.ttf') format('truetype'),
+         url('../main_css/Verdana.svg#PT Sans Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	font: Verdana;
+	display: inline-block;
+	table-layout:0; 
+	padding:0px; 
+	cursor: pointer;
+	text-decoration: none; 
+	outline: none;
+	user-select: none;	
+}
+
+body {
+    font-family: "Verdana";
+}
+
+.fnt_10 {
+  font-size: 10px;
+  color: #663300;
+}
+.fnt_12 {
+  font-size: 12px;
+  color: #663300;
+}
+
+.fnt_14 {
+  font-size: 14px;
+  color: #663300;
+}
+
+.fnt_16 {
+  font-size: 16px;
+  color: #663300;
+}
+
+.fnt_18 {
+  font-size: 18px;
+  color: #663300;
+}
+
+.fnt_bold {
+   font-weight: bold;
+   margin-bottom:5px; 
+   margin-top:10x; 
+}
+
+.fnt_italic{
+  font-style: italic;
+}
+
+.fnt_normal {
+    font-weight: normal;
+    font-style: normal;
+}
+
