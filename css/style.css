@@ -24,13 +24,14 @@ body {
   /* margin-left: 10px; */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   
 }
 .subheader {
   font-size: 28px;
   font-weight: bold;
-  color: #9A2E00
+  color: #9A2E00;
+  margin-bottom: 10px;
 }
 .subheader_url {
   font-size: 18px;
