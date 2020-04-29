@@ -35,6 +35,7 @@ body {
 }
 .subheader_url {
   font-size: 18px;
+  font-weight: bold;
 }
 .language_ico {
   /* margin-left: auto; */
@@ -66,7 +67,16 @@ body {
   padding-right: 10px;
   padding-left: 10px;
   user-select: none;
+  cursor:pointer
   /* transition: 0.2s; */
+}
+.menuitem:hover {
+  background-color: #7FC0C4;
+  color: #ffffff;
+}
+.menuitem_select, .menuitem_select:hover {
+  background-color: #00818A;
+  color: #E8E8E8;
 }
 .menuitem_img {
   width: 33px;
@@ -77,11 +87,10 @@ body {
 .menuitem_text {
   margin: auto;
 }
-.menuitem_select {
-  background-color: #00818A;
-  color: #E8E8E8;
-}
 .separator {
   background: #00818A;
     height: 2px;
+}
+.content {
+  background-color: blue;
 }

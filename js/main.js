@@ -15,27 +15,12 @@ let SubheaderUrlText = {
 }
 
 let arrMenuItemsText = document.querySelectorAll(".menuitem_text");
-// console.log(arrMenuItemsText)
-// Array.from(arrMenuItemsText).map (function (item, index) {
-//   console.log(arrMenuItemsValues['icoEng'][index])
-//   console.log(arrMenuItemsValues['icoRus'][index])
 
-// })
-console.log(document.querySelector(".subheader_url"))
-
-let langButton = document.querySelector (".language_ico")
-langButton.addEventListener('click', function(event) {
+document.querySelector (".language_ico").addEventListener('click', function(event) {
   this.src = (this.id == "icoRus") ? "../img/icoEng.png" : "../img/icoRus.png";
   this.id = (this.id == "icoRus") ? "icoEng" : "icoRus";
   let id = (this.id == "icoRus") ? "icoEng" : "icoRus";
 
-  // if (this.id == "icoRus") {
-  //   this.id = "icoEng";
-  //   this.src = "../img/icoEng.png";
-  // } else {
-  //   this.id = "icoRus";
-  //   this.src = "../img/icoRus.png";
-  // }
   let arrMenuItemsText = document.querySelectorAll(".menuitem_text");
   Array.from(arrMenuItemsText).map (function (item, index) {
     item.innerText = (arrMenuItemsValues[id][index])
@@ -44,3 +29,32 @@ langButton.addEventListener('click', function(event) {
   document.querySelector(".subheader").innerText = SubheaderText[id]
   document.querySelector(".subheader_url").innerHTML = SubheaderUrlText[id]
 })
+
+let menuButtons = document.querySelectorAll(".menuitem");
+Array.from(menuButtons).map (function (item) {
+  item.addEventListener ('click', function (event) {
+    if (!this.matches(".menuitem_select")) {
+      Array.from(menuButtons).map (function (item) {
+        item.classList.remove("menuitem_select")
+      })
+      this.classList.add("menuitem_select")
+      // console.log(this.className)
+      LoadAndShowContent('./'+this.id+'.html')
+      // console.log(this.id)
+
+    }
+  })
+})
+
+LoadAndShowContent ("./structure.html")
+
+function LoadAndShowContent (url) {
+  fetch(url)
+    .then (responce => responce.text())
+    .then (result => {
+      document.querySelector(".content").innerHTML = result
+      // console.log("rere " + result)
+    })
+}
+
+ 
