@@ -16,6 +16,7 @@ let SubheaderUrlText = {
 
 let arrMenuItemsText = document.querySelectorAll(".menuitem_text");
 
+//на кнопку с флажком сажаем процедуру спмены языка шапки и меню
 document.querySelector (".language_ico").addEventListener('click', function(event) {
   this.src = (this.id == "icoRus") ? "../img/icoEng.png" : "../img/icoRus.png";
   this.id = (this.id == "icoRus") ? "icoEng" : "icoRus";
@@ -30,6 +31,8 @@ document.querySelector (".language_ico").addEventListener('click', function(even
   document.querySelector(".subheader_url").innerHTML = SubheaderUrlText[id]
 })
 
+// на кнопки меню сажаем функцию, которая из id кнопки делает имя файла и вызывает 
+// функцию закачки файла и помещения его в секцию ".content"
 let menuButtons = document.querySelectorAll(".menuitem");
 Array.from(menuButtons).map (function (item) {
   item.addEventListener ('click', function (event) {
@@ -48,6 +51,7 @@ Array.from(menuButtons).map (function (item) {
 
 LoadAndShowContent ("./structure.html")
 
+// закачивает файл из url и помщает его в секцию ".content"
 function LoadAndShowContent (url) {
   fetch(url)
     .then (responce => responce.text())
